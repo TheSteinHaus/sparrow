@@ -1,0 +1,51 @@
+.registerContainer {
+    background-color: #A28ED7;
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 15%;
+    animation: .6s easeIn steps(120);
+    z-index: -20;
+}
+
+.registerButton {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 200px;
+    border-radius: 25px;
+    border: none;
+    z-index: 1;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+}
+
+.registerButton::after {
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 120%;
+    left: -15%;
+    top: -8%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -2;
+    border-radius: 25px;
+    transition: .2s ease-in-out;
+}
+
+.registerButton:hover {
+    cursor: pointer;
+}
+
+.arrowLogReg {
+    position: absolute;
+    transform: translateX(-235px) translateY(4px) rotate(180deg);
+}

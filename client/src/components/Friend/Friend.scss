@@ -1,0 +1,32 @@
+.friend {
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__wrapper {
+        max-width: 65%;
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__avatar {
+        width: 44px;
+        height: 44px;
+        & img {
+            width: 44px;
+            height: 44px;
+        }
+    }
+    &__name {
+        font-size: 20px;
+        font-weight: normal;
+        color: white;
+    }
+    &__arrow {
+        & img {
+            height: 20px;
+            fill: transparent;
+        }
+    }
+}
