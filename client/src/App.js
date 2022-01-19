@@ -2,8 +2,9 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import LoginComponent from './components/Login/Login';
 import RegistrationComponent from './components/Registration/Registration';
 import StartComponent from './components/Start/Start';
-import Main from './components/Main/Main';
+import Friends from './components/Friends/Friends';
 import Header from './components/Header/Header';
+import Main from './components/Main/Main'
 import './App.css';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         </Route>
 
         <Route path="/friends">
-          <Header />
+          <Friends />
         </Route>
 
         <Route path="/main">

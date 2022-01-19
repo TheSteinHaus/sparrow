@@ -1,6 +1,7 @@
 .friends {
-    padding: 15px 0 15px 20px;
-    max-width: 325px;
-    background-color: #a28ed7;
-    height: 100%;
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

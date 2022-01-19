@@ -1,13 +1,37 @@
 .chatInput {
+    width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    padding: 10px 15px;
+    background-color: #a28ed7;
+    border-radius: 15px;
     &__clip {
+        width: 24px;
+        height: 24px;
     }
     &__field {
+        flex: 1 0 auto;
+        margin: 0 1%;
+        background-color: #a28ed7;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        color: white;
+        font-size: 20px;
+        &::-webkit-input-placeholder {
+            color: rgb(225, 225, 225);
+        }
     }
     &__emoji {
+        width: 24px;
+        height: 24px;
+        flex: 0 1 auto;
     }
     &__arrowSend {
+        width: 60px;
+        height: 24px;
     }
 }

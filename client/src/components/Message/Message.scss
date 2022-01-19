@@ -1,0 +1,20 @@
+.message {
+    padding: 5px 10px;
+    background-color: #aa69ee;
+    border-radius: 25px 25px 25px 0;
+    margin-bottom: 10px;
+    max-width: fit-content;
+    &__text {
+        color: white;
+    }
+    &__time {
+        color: yellow;
+        font-weight: bold;
+        text-align: end;
+    }
+    &_me {
+        margin-left: auto;
+        margin-right: 0;
+        border-radius: 25px 25px 0 25px;
+    }
+}

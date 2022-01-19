@@ -1,5 +1,5 @@
 import React from "react";
-import Friends from "../Friends/Friends";
+import Friends from "../FriendList/FriendList";
 import Header from "../Header/Header";
 import { ReactComponent as Clip } from "../svg/clip.svg";
 import { ReactComponent as Emoji } from "../svg/emoji.svg";
