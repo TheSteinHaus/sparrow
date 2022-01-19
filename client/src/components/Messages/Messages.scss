@@ -3,11 +3,12 @@
     flex-direction: column;
     justify-content: space-between;
     flex: 1 0 auto;
+    background-color: rgba($color: #561c6e, $alpha: 0.6);
     height: 65vh;
     padding: 2% 5%;
     overflow-y: auto;
     &::-webkit-scrollbar {
-        background-color: rebeccapurple;
+        background-color: rgba($color: #561c6e, $alpha: 0);
         width: 10px;
     }
     &::-webkit-scrollbar-thumb {

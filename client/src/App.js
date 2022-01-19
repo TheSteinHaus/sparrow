@@ -4,6 +4,7 @@ import RegistrationComponent from './components/Registration/Registration';
 import StartComponent from './components/Start/Start';
 import Friends from './components/Friends/Friends';
 import Header from './components/Header/Header';
+import Main from './components/Main/Main'
 import './App.css';
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
         </Route>
 
         <Route path="/main">
-          {/* <Main /> */}
+          <Main />
         </Route>
 
         <Redirect to="/start" />
