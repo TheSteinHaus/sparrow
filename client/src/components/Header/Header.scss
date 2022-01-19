@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #9157aa;
+    height: 80px;
+    &__logo {
+        width: 56px;
+        fill: #ffeb7d;
+    }
+    &__chats {
+        margin-left: 15px;
+        color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0);
+        outline: none;
+        border: none;
+        font-size: 18px;
+        &_activeFriends {
+            border-bottom: 4px solid whitesmoke;
+            height: 50px;
+        }
+    }
+    &__profile {
+        display: flex;
+        flex-direction: row;
+    }
+    &__userlogo {
+        width: 75px;
+    }
+    &__exit {
+        height: 90%;
+        margin-top: 5px;
+        margin-left: 15px;
+        color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0);
+        outline: none;
+        border: none;
+        border-radius: 30% 70% 30% 70%;
+        font-size: 18px;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+}

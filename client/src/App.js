@@ -1,10 +1,10 @@
-import './App.css';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import LoginComponent from './components/Login/Login';
 import RegistrationComponent from './components/Registration/Registration';
 import StartComponent from './components/Start/Start';
 import Main from './components/Main/Main';
 import Header from './components/Header/Header';
+import './App.css';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Route path="/login">
           <LoginComponent />
         </Route>
-        
+
         <Route path="/register">
           <RegistrationComponent />
         </Route>
@@ -27,8 +27,7 @@ function App() {
         </Route>
 
         <Route path="/main">
-          {/* <Main /> */}
-          <Header />
+          <Main />
         </Route>
 
         <Redirect to="/start" />

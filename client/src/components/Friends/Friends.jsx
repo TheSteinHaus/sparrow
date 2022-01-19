@@ -8,6 +8,9 @@ function Friends(props) {
             <Friend name="Alex Sensei" />
             <Friend name="Alex Sensei" />
             <Friend name="Alex Sensei" />
+            <Friend name="Alex Sensei" />
+            <Friend name="Alex Sensei" />
+            <Friend name="Alex Sensei" />
         </div>
     );
 }

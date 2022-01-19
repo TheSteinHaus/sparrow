@@ -1,0 +1,54 @@
+.register {
+    background-color: #a28ed7;
+    padding: 15px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 15%;
+    animation: 0.6s easeIn steps(120);
+    z-index: -20;
+    &__arrowBack {
+        position: absolute;
+        transform: translate(-200px, 4px) rotate(180deg);
+    }
+    &__title {
+        color: rgb(255, 255, 255);
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+    &__button {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        height: 40px;
+        width: 200px;
+        border-radius: 25px;
+        border: none;
+        z-index: 1;
+        background: none;
+        color: white;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        outline: none;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 130%;
+            height: 120%;
+            left: -15%;
+            top: -8%;
+            background-color: rgba(255, 255, 255, 0.3);
+            z-index: -2;
+            border-radius: 25px;
+            transition: 0.2s ease-in-out;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
