@@ -1,0 +1,16 @@
+.friendList {
+    padding: 15px 0 15px 20px;
+    max-width: 325px;
+    background-color: #a28ed7;
+    height: 85vh;
+    flex: 1 0 auto;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        background-color: #a28ed7;
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #9157aa;
+        border-radius: 25px;
+    }
+}

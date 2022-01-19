@@ -1,16 +1,17 @@
 import React from "react";
-import Friend from "../Friend/Friend";
+import Chat from "../Chat/Chat";
+import FriendList from "../FriendList/FriendList";
+import Header from "../Header/Header";
 import './Friends.scss'
 
 function Friends(props) {
     return (
         <div className="friends">
-            <Friend name="Alex Sensei" />
-            <Friend name="Alex Sensei" />
-            <Friend name="Alex Sensei" />
-            <Friend name="Alex Sensei" />
-            <Friend name="Alex Sensei" />
-            <Friend name="Alex Sensei" />
+            <Header />
+            <div className="friends__container">
+                <FriendList />
+                <Chat />
+            </div>
         </div>
     );
 }
