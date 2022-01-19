@@ -5,10 +5,21 @@
     align-items: center;
     &__wrapper {
         max-width: 65%;
+        padding: 15px;
+        border-radius: 25px;
         flex: 1 1 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &:hover {
+            background-color: #b0a1d7;
+            & ~ .friend__arrow {
+                opacity: 1;
+            }
+        }
+        &:focus {
+            background-color: #b0a1d7;
+        }
     }
     &__avatar {
         width: 44px;
@@ -24,9 +35,6 @@
         color: white;
     }
     &__arrow {
-        & img {
-            height: 20px;
-            fill: transparent;
-        }
+        opacity: 0;
     }
 }
