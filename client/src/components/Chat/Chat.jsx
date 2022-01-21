@@ -1,15 +1,13 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import ChatInput from "../ChatInput/ChatInput";
-import Friends from "../FriendList/FriendList";
-import Header from "../Header/Header";
 import Messages from "../Messages/Messages";
 import './Chat.scss'
 
 function Chat(props) {
     return (
         <div className="chat">
-            <Messages />
-            <ChatInput />
+            <Messages messages={props.messages} user={props.user} />
+            <ChatInput setNewMessage={props.setNewMessage} newMessage={props.newMessage} handleSubmit={props.handleSubmit} />
         </div>
     );
 }

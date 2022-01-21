@@ -8,10 +8,18 @@ body {
     background-color: #9157aa;
     height: 80px;
     &__logo {
+        padding: 5px;
+        margin-top: 5px;
         width: 56px;
         fill: #ffeb7d;
+        border-radius: 25%;
+        transition: .2s;
+        &:hover {
+            background-color: #a18ed7;
+        }
     }
     &__chats {
+        margin-top: 25px;
         margin-left: 15px;
         color: rgba(255, 255, 255, 0.9);
         background-color: rgba(255, 255, 255, 0);
@@ -19,27 +27,36 @@ body {
         border: none;
         font-size: 18px;
         &_activeFriends {
+            margin-top: 10px;
             border-bottom: 4px solid whitesmoke;
-            height: 50px;
+            height: 40px;
         }
     }
     &__profile {
         display: flex;
         flex-direction: row;
     }
+    &__nickname {
+        padding: 12px;
+        align-self: center;
+        border-radius: 10px;
+        color: white;
+        background-color: #a18ed7;
+        font-size: 18px;
+    }
     &__userlogo {
         width: 75px;
     }
     &__exit {
-        height: 90%;
-        margin-top: 5px;
-        margin-left: 15px;
+        height: 80%;
+        margin-top: 9px;
         color: rgba(255, 255, 255, 0.9);
         background-color: rgba(255, 255, 255, 0);
         outline: none;
         border: none;
-        border-radius: 30% 70% 30% 70%;
+        border-radius: 40% 65% 40% 65%;
         font-size: 18px;
+        transition: .2s;
         &:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
