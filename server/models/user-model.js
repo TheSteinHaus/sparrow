@@ -7,6 +7,9 @@ const UserSchema = new Schema({
     confirmPassword: {type: String, required: false},
     isActivated: {type: Boolean, default: false},
     activationLink: {type: String},
-})
+    followers: {type: Array, default: []},
+    followings: {type: Array, default: []},
+}, {timestamps: true}
+)
 
 module.exports = model('User', UserSchema);

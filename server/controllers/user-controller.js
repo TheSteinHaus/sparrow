@@ -1,6 +1,7 @@
 const userService = require('../service/user-service');
 const {validationResult} = require('express-validator');
 const ApiError = require('../exceptions/api-error');
+const User = require('../models/user-model')
 
 class UserController {
     async registration(req, res, next) {
@@ -70,11 +71,31 @@ class UserController {
     }
 
     async getUsers(req, res, next) {
+        const userId = req.query.userId;
+        const username = req.query.username;
         try {
-            const users = await userService.getAllUsers();
-            return res.json(users);
-        } catch (e) {
-            next(e);
+            const user = userId
+            ? await User.findById(userId)
+            : await User.findOne({ username: username });
+            const { password, updatedAt, ...other } = user._doc;
+            res.status(200).json(other);
+        } catch (err) {
+            res.status(500).json(err);
+        }
+    }
+
+    async getUser(req, res) {
+        const username = req.query.username;
+        console.log(username)
+        try {
+            console.log("AA")
+            const user = await User.findOne({ login: username })
+            console.log("BB")
+            const idLog = {id: user._id, login: user.login}
+            console.log(idLog);
+            res.status(200).json(idLog)
+        } catch (err) {
+            res.status(500).json(err);
         }
     }
 }

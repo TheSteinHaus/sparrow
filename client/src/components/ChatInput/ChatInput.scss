@@ -30,8 +30,19 @@
         height: 24px;
         flex: 0 1 auto;
     }
+    &__buttonSend {
+        padding: 5px;
+        margin-left: 5px;
+        background: none;
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        &:hover {
+            background-color: rgba($color: white, $alpha: 0.3);
+        }
+    }
     &__arrowSend {
-        width: 60px;
+        width: 35px;
         height: 24px;
     }
 }

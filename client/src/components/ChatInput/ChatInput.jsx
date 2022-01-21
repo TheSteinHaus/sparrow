@@ -10,9 +10,9 @@ function ChatInput(props) {
     return (
         <div className="chatInput">
             <Clip className="chatInput__clip" />
-            <input type="text" placeholder="Напиши сообщение..." className="chatInput__field" />
+            <input onChange={e => props.setNewMessage(e.target.value)} value={props.newMessage} type="text" placeholder="Напиши сообщение..." className="chatInput__field" />
             <Emoji className="chatInput__emoji" />
-            <ArrowSend className="chatInput__arrowSend" />
+            <button onClick={props.handleSubmit} className="chatInput__buttonSend"><ArrowSend className="chatInput__arrowSend" /></button>
         </div>
     );
 }

@@ -15,7 +15,7 @@ function LoginComponent(props) {
             <p className='login__title'><b>Вход</b></p>
             <input type='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='Почта' className='login__field' />
             <input type='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='Пароль' className='login__field' />
-            <button className='login__button' onClick={() => store.login(email, password)} type='submit'>Войти</button>
+            <Link to={'/main'}><button className='login__button' onClick={() => {store.login(email, password).then(store.isLoading = true).finally(store.isLoading = false)}} type='submit'>Войти</button></Link>
         </div>
     );
 }

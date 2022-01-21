@@ -1,11 +1,12 @@
 import React from "react";
+import { format } from 'timeago.js'
 import './Message.scss'
 
-function Message(props) {
+function Message({message, own}) {
     return (
-        <div className={props.isMe === true ? "message message_me" : "message"}>
-            <p className="message__text">{props.messageText}</p>
-            <p className="message__time">{props.time}</p>
+        <div className={own === true ? "message message_me" : "message"}>
+            <p className="message__text">{message.text}</p>
+            <p className="message__time">{format(message.createdAt)}</p>
         </div>
     );
 }
