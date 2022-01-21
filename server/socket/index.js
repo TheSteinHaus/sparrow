@@ -7,14 +7,10 @@ const io = require("socket.io")(8000, {
 let users = [];
 
 const addUser = (userId, socketId) => {
-  console.log(userId, socketId, "AAAAAA")
+  console.log(userId, socketId)
   !users.some((user) => user.userId === userId) &&
     users.push({ userId, socketId });
   console.log(users)
-};
-
-const removeUser = (socketId) => {
-  users = users.filter((user) => user.socketId !== socketId);
 };
 
 const getUser = (userId) => {
@@ -45,7 +41,6 @@ io.on("connection", (socket) => {
   //when disconnect
   socket.on("disconnect", () => {
     console.log("a user disconnected!");
-    removeUser(socket.id);
     io.emit("getUsers", users);
   });
 });

@@ -114,8 +114,8 @@ export default function Messenger({user}, props) {
 
   return (
     <>
-    {console.log(conversations)}
-    <Friends setFriendId={setFriendId} handleSubmit={handleSubmit} setNewMessage={setNewMessage} newMessage={newMessage} setCurrentChat={setCurrentChat} user={user} messages={messages} currentId={user.id} friends={friends} />
+    {console.log(user)}
+    <Friends key={user.id} setFriendId={setFriendId} handleSubmit={handleSubmit} setNewMessage={setNewMessage} newMessage={newMessage} setCurrentChat={setCurrentChat} user={user} messages={messages} currentId={user.id} friends={friends} />
     </>
   );
 }

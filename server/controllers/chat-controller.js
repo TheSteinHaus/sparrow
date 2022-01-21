@@ -7,10 +7,6 @@ class ChatController {
         try {
             const user = await User.findOne({_id: req.params.userId});
             console.log(user._id)
-            // const friends = await
-            //     user.followings.map((friendId) => {
-            //         return User.findOne({_id: friendId});
-            //     })
             console.log(user.followings)
             let friendList = []
             user.followings.map((friend) => {
